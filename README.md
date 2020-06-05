@@ -1,6 +1,6 @@
 Dab_timer_discord_bot
 
-Commands are always excuted by typing $<command>
+Commands are always excuted by typing $command
 
 Dab_timer_bot command list:
 
