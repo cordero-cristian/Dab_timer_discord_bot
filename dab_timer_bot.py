@@ -95,7 +95,7 @@ client = discord.Client()
 @client.event
 async def on_message(message):
 
-    possible_message_content = tuple ()
+    possible_message_content_for_timer = tuple ()
     possible_message_content_for_timer = ('$timer',
                                           '$Timer',
                                           '$TIMER'
