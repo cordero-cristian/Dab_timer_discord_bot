@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-#please use python3.5, the discord module only works python3.5 and lower
+#please use python3.5, the discord module only works with python3.5 and lower
 
 import discord
 from datetime import *
@@ -42,12 +42,13 @@ class timer():
                     def __int__(self):
                         self = self()
 
-                    if total_seconds % 10 == 0 or total_seconds % 5 == 0 or total_seconds == 0:
+                    if total_seconds % 10 == 0 or total_seconds % 5 == 0:
 
                         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         secs = str(total_seconds)
                         text = str()
                         text = ("Take your Dab in " + secs + " Seconds\n" + "The Current time is: " + now + "\nTake your Dab at " + time_to_dab.strftime("%Y-%m-%d %H:%M:%S"))
+
                         if total_seconds == 0:
 
                             text = "Take your Dab Now!"
@@ -58,7 +59,7 @@ class timer():
                 z = z - 1
                 time.sleep(.95)
 
-                if x != None:
+                if x is not None:
 
                     return x
 
@@ -66,11 +67,16 @@ class timer():
 
             kick_off = time_keep(amount_of_seconds)
 
-            if kick_off != None:
+            if kick_off is not None:
+
                 return kick_off
+
             else:
+
                 amount_of_seconds = amount_of_seconds - 1
+
 #end of class Timer
+#start of class github
 class github():
 
     def source_code():
@@ -78,14 +84,9 @@ class github():
         text = 'https://github.com/cordero-cristian/Dab_timer_discord_bot'
 
         return text
-
-
+#end of class github
 
 #end of functions
-
-
-
-
 
 client = discord.Client()
 
@@ -119,7 +120,7 @@ async def on_message(message):
             entry = timer.dab_timer(seconds_for_timer)
             seconds_for_timer = seconds_for_timer - 1
 
-            if entry != None:
+            if entry is not None:
 
                 await message.channel.send(entry)
 
@@ -127,7 +128,6 @@ async def on_message(message):
 
         entry = github.source_code()
         await message.channel.send(entry)
-
 
 token = input("Enter Bots Token Creds\n")
 client.run(token)
