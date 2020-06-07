@@ -17,9 +17,6 @@ import time
 #start of class timer
 class timer():
 
-    def __int__(self):
-        self = self()
-
     def find_seconds(str):
 
         position1 = str.index('|')
@@ -39,8 +36,6 @@ class timer():
             if z >= 0:
 
                 def get_secs(total_seconds):
-                    def __int__(self):
-                        self = self()
 
                     if total_seconds % 10 == 0 or total_seconds % 5 == 0:
 
