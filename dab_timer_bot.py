@@ -22,6 +22,7 @@ class timer():
         position1 = str.index('|')
         position2 = position1 + 2
         secs = str[position2:]
+        
         return secs
 
     def dab_timer(int):
