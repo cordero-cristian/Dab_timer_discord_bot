@@ -8,3 +8,6 @@ Dab_timer_bot command list:
 		this will send a message every 5 seconds counting down from you 
 	$source
 		sends a message with a github link to the source code for the bot
+	$score 
+		sends a message with the total amount of times you have used the timer, 
+	
